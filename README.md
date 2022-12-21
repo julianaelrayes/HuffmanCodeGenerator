@@ -1,6 +1,5 @@
 # HuffmanCodeGenerator
-
-Finds the shortest path between two vertices by implementing an undirected weighted Graph ADT and performing **Dijkstra's Algorithm**.
+**Huffman code** uses a set of prefix code to compress the string with no loss of data (lossless).
 
 ## Design 
 
@@ -11,10 +10,7 @@ Finds the shortest path between two vertices by implementing an undirected weigh
 * [x] The last pair in the priority queue is the root node of the tree.
 * [x] Using this new tree,the characters in the string are encoded using a map with their prefix code by traversing the tree to find where the character’s leaf is. When traversal goes left, it adds a 0 to the code, when it goes right, it adds a 1 to the code.
 * [x] The characters in the string are replaced with their new variable-length prefix codes.
-
-## Codes for the characters
-
-<img width="682" alt="Screenshot 2022-12-20 at 11 38 48 PM" src="https://user-images.githubusercontent.com/95254925/208822582-08c40cbf-c48e-4f1f-8b2f-dac7863c64a6.png">
+* [x] Serializes the tree. Tree serialization will organize the characters associated with the nodes using post order. During the post order when you visit a node, if it the node is a leaf (external node) then it adds a L plus the character to the serialize tree string; otherwise, if it is a branch (internal node) then it adds a B to the serialize tree string.
 
 ## License
 
